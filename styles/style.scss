@@ -1,1 +1,327 @@
-@import "../plugins/bulma/bulma.sass"
+/*
+    Import Lybraries
+*/
+
+// Change Variable Default
+@import '../plugins/bulma/sass/utilities/initial-variables.sass';
+$navbar-breakpoint: $tablet;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Import All Sass In Bulma
+@import '../plugins/bulma/bulma.sass';
+
+
+/*
+    Include Fonts
+*/
+@font-face {
+    font-family: "NunitoSans";
+    font-weight: 300;
+    src: url("../fonts/NunitoSans-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "NunitoSans";
+    font-weight: 400;
+    src: url("../fonts/NunitoSans-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "NunitoSans";
+    font-weight: 600;
+    src: url("../fonts/NunitoSans-SemiBold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "NunitoSans";
+    font-weight: 700;
+    src: url("../fonts/NunitoSans-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "NunitoSans";
+    font-weight: 800;
+    src: url("../fonts/NunitoSans-ExtraBold.ttf") format('truetype');
+}
+
+// Finish Include Font Face
+
+/*
+    Vairiable
+*/
+$font-NunitoSans : "NunitoSans";
+
+
+/*
+    Begin Style
+*/
+.header {
+    width: 100vw;
+    height: 100vh;
+    background-color: #100e1b;
+
+    .background {
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/header.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.3;
+        position: fixed;
+    }
+
+    .navbar {
+
+        background: transparent;
+        margin: auto 20px;
+
+        .navbar-brand {
+
+            font-family: $font-NunitoSans;
+            font-size: 2.2rem;
+            font-weight: 800;
+
+            .brand {
+
+                color: #ecf0f1;
+
+                &:hover {
+                    color: #ffffff;
+                }
+            }
+
+            .navbar-burger {
+
+                padding: 0.5rem 0.75rem;
+
+                &:hover {
+
+                    i {
+                        color: #ecf0f1;
+                    }
+
+                }
+            }
+
+            .fa-bars {
+
+                height: 2rem;
+                line-height: 2rem;
+                white-space: nowrap;
+            }
+        }
+
+        .navbar-start {
+
+            font-family: $font-NunitoSans;
+            font-size: 1rem;
+            font-weight: 400;
+
+            .take-photos {
+
+                &:hover {
+
+                    background-color: transparent;
+
+                    span {
+                        color: #ffffff;
+                    }
+                }
+
+                span {
+                    margin-left: 3px;
+                    color: #c2c2c2;
+                }
+            }
+
+        }
+        // End Navbar Start
+
+        .navbar-end {
+
+            font-size: 1rem;
+
+            div {
+
+                a {
+                    color: #c2c2c2;
+
+                    &:hover {
+                        color: #fd6500;
+
+                    }
+                }
+            }
+
+            .navbar-item {
+                
+                padding-left: 5px;
+                padding-right: 5px;
+
+            }
+
+            .register {
+
+                font-family: $font-NunitoSans;
+                font-weight: 400;
+
+                a {
+                    margin: 3px;
+                }
+            }
+
+            .language {
+
+                font-family: $font-NunitoSans;
+
+                select {
+
+                    font-weight: 700;
+                    box-shadow: none;
+                    border: none;
+                    background-color: transparent;
+                    color: #ecf0f1;
+
+                    option {
+
+                        color: #100e1b;
+                    }
+                }
+
+                &:hover {
+
+                    .select select {
+
+                        color: #fd6500;
+                    }
+
+                    .select::after {
+
+                        border-color: #fd6500;
+                    }
+                }
+
+            }
+
+            .user img {
+
+                cursor: pointer;
+            }
+
+            .blog {
+
+                font-family: $font-NunitoSans;
+                font-weight: 300;
+            }
+        }
+        // End Navbar-End
+    }
+    // End Navbar
+
+    .header-center {
+
+        .slogan {
+
+            max-width: 70%;
+            font-family: $font-NunitoSans;
+            margin: auto;
+
+            @include mobile {
+                font-size: 6px;
+            }
+
+            @include tablet {
+                font-size: 6px;
+            }
+
+            @include desktop {
+                font-size: 9px;
+            }
+
+            .slogan__title {
+
+                font-weight: 800;
+                font-size: 6.4em;
+                color: #ffffff;
+            }
+
+            .slogan__subtitle {
+
+                font-weight: 300;
+                font-size: 2.5em;
+                color: #ffffff;
+            }
+        }
+        // End Slogan
+
+        .search-bar {
+
+            >.columns {
+                margin: 60px;
+            }
+
+            .columns.search-bar__main {
+
+                .column {
+                    padding-top: 10px !important;
+                    padding-bottom: 10px !important;
+                    background-color: #ecf0f1;
+
+                    * {
+
+                        background-color: transparent;
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                        border-radius: 0;
+                        outline: none;
+                        box-shadow: none;
+                        font-family: $font-NunitoSans;
+                        font-weight: 600;
+                    }
+
+                    &:first-child {
+
+                        @include mobile {
+                            border-top-left-radius: 20px;
+                            border-top-right-radius: 20px;
+                        }
+
+                        @include tablet {
+                            border-top-left-radius: 999px;
+                            border-bottom-left-radius: 999px;
+                        }
+                    }
+
+                    &:last-child {
+
+                        background-color: #fd6500;
+
+                        @include mobile {
+                            border-bottom-left-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                        }
+
+                        @include tablet {
+                            border-top-right-radius: 999px;
+                            border-bottom-right-radius: 999px;
+                        }
+
+                    }
+
+                    a {
+
+                        color: #ecf0f1;
+                        font-weight: 800;
+                        font-size: 1rem;
+                    }
+                }
+            }
+            // End Search Bar Main
+        }
+        // End search Bar
+    }
+    // End Header Center
+}
+// End Header
