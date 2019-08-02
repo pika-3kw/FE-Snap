@@ -10610,32 +10610,32 @@ label.panel-block:hover {
     Include Fonts
 */
 @font-face {
-  font-family: "NunitoSans";
   font-weight: 300;
+  font-family: "NunitoSans";
   src: url("../fonts/NunitoSans-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "NunitoSans";
   font-weight: 400;
+  font-family: "NunitoSans";
   src: url("../fonts/NunitoSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "NunitoSans";
   font-weight: 600;
+  font-family: "NunitoSans";
   src: url("../fonts/NunitoSans-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "NunitoSans";
   font-weight: 700;
+  font-family: "NunitoSans";
   src: url("../fonts/NunitoSans-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "NunitoSans";
   font-weight: 800;
+  font-family: "NunitoSans";
   src: url("../fonts/NunitoSans-ExtraBold.ttf") format("truetype");
 }
 
@@ -10647,29 +10647,62 @@ label.panel-block:hover {
 */
 .header {
   width: 100vw;
-  height: 100vh;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: calc(100vh + 75px);
+  }
+}
+
+@media screen and (min-width: 769px), print {
+  .header {
+    height: calc(100vh + 75px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    height: calc(100vh + 90px);
+  }
+}
+
+.header::before {
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   background-color: #100e1b;
 }
 
-.header .background {
+.header::after {
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  background-image: url("../images/header.png");
-  background-repeat: no-repeat;
+  position: absolute;
   background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("../images/header.png");
   opacity: 0.3;
-  position: fixed;
 }
 
 .header .navbar {
-  background: transparent;
   margin: auto 20px;
+  background: transparent;
 }
 
 .header .navbar .navbar-brand {
-  font-family: "NunitoSans";
-  font-size: 2.2rem;
   font-weight: 800;
+  font-size: 2.2rem;
+  font-family: "NunitoSans";
 }
 
 .header .navbar .navbar-brand .brand {
@@ -10695,9 +10728,9 @@ label.panel-block:hover {
 }
 
 .header .navbar .navbar-start {
-  font-family: "NunitoSans";
   font-size: 1rem;
   font-weight: 400;
+  font-family: "NunitoSans";
 }
 
 .header .navbar .navbar-start .take-photos:hover {
@@ -10731,8 +10764,8 @@ label.panel-block:hover {
 }
 
 .header .navbar .navbar-end .register {
-  font-family: "NunitoSans";
   font-weight: 400;
+  font-family: "NunitoSans";
 }
 
 .header .navbar .navbar-end .register a {
@@ -10744,12 +10777,12 @@ label.panel-block:hover {
 }
 
 .header .navbar .navbar-end .language select {
+  border: none;
+  color: #ecf0f1;
   font-weight: 700;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: none;
   background-color: transparent;
-  color: #ecf0f1;
 }
 
 .header .navbar .navbar-end .language select option {
@@ -10769,31 +10802,33 @@ label.panel-block:hover {
 }
 
 .header .navbar .navbar-end .blog {
-  font-family: "NunitoSans";
   font-weight: 300;
+  font-family: "NunitoSans";
 }
 
 .header .header-center .slogan {
+  margin: auto;
   max-width: 70%;
   font-family: "NunitoSans";
-  margin: auto;
 }
 
 @media screen and (max-width: 768px) {
   .header .header-center .slogan {
-    font-size: 6px;
+    font-size: 5px;
   }
 }
 
 @media screen and (min-width: 769px), print {
   .header .header-center .slogan {
     font-size: 6px;
+    margin-top: 40px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .header .header-center .slogan {
     font-size: 9px;
+    margin-top: 40px;
   }
 }
 
@@ -10814,22 +10849,33 @@ label.panel-block:hover {
 }
 
 .header .header-center .search-bar .columns.search-bar__main .column {
+  background-color: #ecf0f1;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
-  background-color: #ecf0f1;
+}
+
+@media screen and (max-width: 768px) {
+  .header .header-center .search-bar .columns.search-bar__main .column {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
 }
 
 .header .header-center .search-bar .columns.search-bar__main .column * {
-  background-color: transparent;
   width: 100%;
   height: 100%;
   border: none;
-  border-radius: 0;
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-family: "NunitoSans";
+  border-radius: 0;
   font-weight: 600;
+  font-family: "NunitoSans";
+  background-color: transparent;
+}
+
+.header .header-center .search-bar .columns.search-bar__main .column > * {
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -10865,8 +10911,110 @@ label.panel-block:hover {
 }
 
 .header .header-center .search-bar .columns.search-bar__main .column a {
-  color: #ecf0f1;
-  font-weight: 800;
   font-size: 1rem;
+  font-weight: 800;
+  color: #ecf0f1;
+}
+
+.header .hotdeal {
+  left: 50%;
+  bottom: 0;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #34314c;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.header .hotdeal .slides .columns {
+  padding: 10px 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .header .hotdeal .slides .columns {
+    width: 450px;
+    height: 150px;
+  }
+  .header .hotdeal .slides .columns .right-slide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px), print {
+  .header .hotdeal .slides .columns {
+    width: 700px;
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header .hotdeal .slides .columns {
+    width: 1000px;
+    height: 180px;
+  }
+}
+
+.header .hotdeal .slides .slide__text {
+  width: 60%;
+  float: left;
+  height: 100%;
+}
+
+.header .hotdeal .slides .slide__text .hero-body {
+  padding-left: 0;
+}
+
+.header .hotdeal .slides .slide__text .hero-body h1,
+.header .hotdeal .slides .slide__text .hero-body h2 {
+  color: white;
+  font-size: 1.125rem;
+  font-family: "NunitoSans";
+}
+
+.header .hotdeal .slides .slide__text .hero-body h1 {
+  font-weight: 800;
+}
+
+.header .hotdeal .slides .slide__text .hero-body h2 {
+  font-weight: 300;
+}
+
+.header .hotdeal .slides .slide__image {
+  width: 40%;
+  height: 100%;
+  float: left;
+  background-color: #c2c2c2;
+}
+
+.header .hotdeal .icon {
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 999px;
+  background-color: #00000065;
+}
+
+.header .hotdeal .icon:hover {
+  background-color: #fd6500;
+}
+
+.header .hotdeal .icon i {
+  color: white;
+  font-size: 1rem;
+}
+
+.header .hotdeal .icon.icon-right {
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.header .hotdeal .icon.icon-left {
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=style.css.map */
