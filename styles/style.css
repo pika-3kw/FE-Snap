@@ -10645,6 +10645,10 @@ label.panel-block:hover {
 /*
     Begin Style
 */
+* {
+  font-family: "NunitoSans";
+}
+
 .header {
   width: 100vw;
   position: relative;
@@ -10702,7 +10706,6 @@ label.panel-block:hover {
 .header .navbar .navbar-brand {
   font-weight: 800;
   font-size: 2.2rem;
-  font-family: "NunitoSans";
 }
 
 .header .navbar .navbar-brand .brand {
@@ -10730,7 +10733,6 @@ label.panel-block:hover {
 .header .navbar .navbar-start {
   font-size: 1rem;
   font-weight: 400;
-  font-family: "NunitoSans";
 }
 
 .header .navbar .navbar-start .take-photos:hover {
@@ -10765,15 +10767,10 @@ label.panel-block:hover {
 
 .header .navbar .navbar-end .register {
   font-weight: 400;
-  font-family: "NunitoSans";
 }
 
 .header .navbar .navbar-end .register a {
   margin: 3px;
-}
-
-.header .navbar .navbar-end .language {
-  font-family: "NunitoSans";
 }
 
 .header .navbar .navbar-end .language select {
@@ -10803,13 +10800,11 @@ label.panel-block:hover {
 
 .header .navbar .navbar-end .blog {
   font-weight: 300;
-  font-family: "NunitoSans";
 }
 
 .header .header-center .slogan {
   margin: auto;
   max-width: 70%;
-  font-family: "NunitoSans";
 }
 
 @media screen and (max-width: 768px) {
@@ -10870,7 +10865,6 @@ label.panel-block:hover {
           box-shadow: none;
   border-radius: 0;
   font-weight: 600;
-  font-family: "NunitoSans";
   background-color: transparent;
 }
 
@@ -10969,7 +10963,6 @@ label.panel-block:hover {
 .header .hotdeal .slides .slide__text .hero-body h2 {
   color: white;
   font-size: 1.125rem;
-  font-family: "NunitoSans";
 }
 
 .header .hotdeal .slides .slide__text .hero-body h1 {
@@ -11016,5 +11009,183 @@ label.panel-block:hover {
   left: 0;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.body-top {
+  margin: 130px auto 30px auto;
+}
+
+.body-top .guild .guild__title {
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+.body-top .guild .guild__title h1 {
+  font-weight: 800;
+}
+
+@media screen and (max-width: 768px) {
+  .body-top .guild .guild__title {
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .body-top .guild .guild__steps--steps {
+    float: left;
+  }
+}
+
+.body-top .guild .guild__steps--steps .step {
+  position: relative;
+  border-radius: 999px;
+  display: inline-block;
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .body-top .guild .guild__steps--steps .step {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 15px 15px;
+  }
+  .body-top .guild .guild__steps--steps .step .text p {
+    display: none;
+  }
+  .body-top .guild .guild__steps--steps .step .text h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 769px), print {
+  .body-top .guild .guild__steps--steps .step {
+    width: 60px;
+    height: 60px;
+    margin: auto 10px;
+    display: inline-block;
+  }
+  .body-top .guild .guild__steps--steps .step .text p {
+    display: initial;
+  }
+  .body-top .guild .guild__steps--steps .step .text h1 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .body-top .guild .guild__steps--steps .step {
+    width: 80px;
+    height: 80px;
+    margin: auto 15px;
+  }
+}
+
+.body-top .guild .guild__steps--steps .step::before {
+  content: "";
+  top: 10%;
+  left: 10%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(136, 136, 136, 0.479), transparent 90%);
+}
+
+.body-top .guild .guild__steps--steps .step:hover {
+  color: #ffffff;
+  background-color: #ff6e00;
+  border: 5px solid #fde0ca;
+}
+
+.body-top .guild .guild__steps--steps .step:hover::before {
+  background: #ffffff;
+}
+
+.body-top .guild .guild__steps--steps .step .text {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.body-top .guild .guild__steps--steps .step .text h1 {
+  font-weight: 700;
+}
+
+.body-top .guild .guild__steps--steps .step .text p {
+  font-weight: 400;
+}
+
+.body-top .guild .guild__steps--text .title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 35px;
+}
+
+.body-top .guild .guild__steps--text .subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.body-top .guild .guild__button a {
+  border: none;
+  padding: 20px;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 999px;
+  background-color: #fd6500;
+}
+
+@media screen and (max-width: 768px) {
+  .body-top .guild .guild__button {
+    margin: auto 20px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .body-top .guild .guild__img {
+    display: none;
+  }
+}
+
+.body-top .guild .trends {
+  margin: 80px auto;
+}
+
+.body-top .guild .trends p {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.body-top .guild .trends img {
+  height: 20px;
+  margin: 10px auto;
+}
+
+.body-top .criteria .criteria__image {
+  margin: auto 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .body-top .criteria .criteria__items .column {
+    margin: auto 50px;
+  }
+}
+
+.body-top .criteria .criteria__items h1 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: -40px;
+  margin-bottom: 10px;
+}
+
+.body-top .criteria .criteria__items p {
+  font-weight: 300;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
