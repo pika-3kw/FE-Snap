@@ -57,6 +57,10 @@ $font-NunitoSans : "NunitoSans";
     Begin Style
 */
 
+* {
+    font-family: $font-NunitoSans;
+}
+
 .header {
 
     width: 100vw;
@@ -112,7 +116,6 @@ $font-NunitoSans : "NunitoSans";
 
             font-weight: 800;
             font-size: 2.2rem;
-            font-family: $font-NunitoSans;
 
             .brand {
 
@@ -149,7 +152,6 @@ $font-NunitoSans : "NunitoSans";
 
             font-size: 1rem;
             font-weight: 400;
-            font-family: $font-NunitoSans;
 
             .take-photos {
 
@@ -198,7 +200,6 @@ $font-NunitoSans : "NunitoSans";
             .register {
 
                 font-weight: 400;
-                font-family: $font-NunitoSans;
 
                 a {
                     margin: 3px;
@@ -206,8 +207,6 @@ $font-NunitoSans : "NunitoSans";
             }
 
             .language {
-
-                font-family: $font-NunitoSans;
 
                 select {
 
@@ -246,7 +245,7 @@ $font-NunitoSans : "NunitoSans";
             .blog {
 
                 font-weight: 300;
-                font-family: $font-NunitoSans;
+
             }
         }
         // End Navbar-End
@@ -260,7 +259,6 @@ $font-NunitoSans : "NunitoSans";
 
             margin: auto;
             max-width: 70%;
-            font-family: $font-NunitoSans;
 
             @include mobile {
                 font-size: 5px;
@@ -290,7 +288,6 @@ $font-NunitoSans : "NunitoSans";
                 color: #ffffff;
             }
         }
-
         // End Slogan
 
         .search-bar {
@@ -321,7 +318,6 @@ $font-NunitoSans : "NunitoSans";
                         box-shadow: none;
                         border-radius: 0;
                         font-weight: 600;
-                        font-family: $font-NunitoSans;
                         background-color: transparent;
                     }
 
@@ -365,13 +361,12 @@ $font-NunitoSans : "NunitoSans";
                     }
                 }
             }
-
             // End Search Bar Main
+
         }
-
         // End search Bar
-    }
 
+    }
     // End Header Center
 
     .hotdeal {
@@ -424,7 +419,6 @@ $font-NunitoSans : "NunitoSans";
                     h2 {
                         color: white;
                         font-size: 1.125rem;
-                        font-family: $font-NunitoSans;
                     }
 
                     h1 {
@@ -488,3 +482,228 @@ $font-NunitoSans : "NunitoSans";
 
 }
 // End Header
+
+.body-top {
+
+    margin: 130px auto 30px auto;
+
+    .guild {
+
+        .guild__title {
+
+            color: #000000;
+            font-size: 1.5rem;
+
+            h1 {
+                font-weight: 800;
+            }
+
+            @include mobile {
+                text-align: center !important;
+            }
+
+        }
+
+        .guild__steps--steps {
+
+            @include mobile {
+                float: left;
+            }
+
+            .step {
+
+                position: relative;
+                border-radius: 999px;
+                display: inline-block;
+                background-color: #ffffff;
+
+                @include mobile {
+
+                    width: 60px;
+                    height: 60px;
+                    display: block;
+                    margin: 15px 15px;
+
+                    .text {
+
+                        p {
+                            display: none;
+                        }
+
+                        h1 {
+                            font-size: 1.5rem;
+                        }
+
+                    }
+
+                }
+
+                @include tablet {
+
+                    width: 60px;
+                    height: 60px;
+                    margin: auto 10px;
+                    display: inline-block;
+
+                    .text {
+
+                        p {
+                            display: initial;
+                        }
+
+                        h1 {
+                            font-size: 1rem;
+                        }
+
+                    }
+
+                }
+
+                @include desktop {
+
+                    width: 80px;
+                    height: 80px;
+                    margin: auto 15px;
+
+                }
+
+                &::before {
+
+                    content: "";
+                    top: 10%;
+                    left: 10%;
+                    z-index: -1;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    border-radius: 999px;
+                    background: linear-gradient(135deg, rgba(136, 136, 136, 0.479), transparent 90%);
+
+                }
+
+                &:hover {
+
+                    color: #ffffff;
+                    background-color: #ff6e00;
+                    border: 5px solid #fde0ca;
+
+                    &::before {
+                        background: #ffffff;
+                    }
+
+                }
+
+                .text {
+
+                    top: 50%;
+                    left: 50%;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+
+                    h1 {
+                        font-weight: 700;
+                    }
+
+                    p {
+                        font-weight: 400;
+                    }
+
+                }
+
+
+            }
+
+        }
+        // End Guild Step -- Step
+
+        .guild__steps--text {
+
+            .title {
+                font-weight: 600;
+                font-size: 1.5rem;
+                margin-bottom: 35px;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+
+        .guild__button {
+
+            a {
+                border: none;
+                padding: 20px;
+                color: white;
+                box-shadow: none;
+                border-radius: 999px;
+                background-color: #fd6500;
+            }
+
+            @include mobile {
+
+                margin: auto 20px !important;
+            }
+        }
+
+        .guild__img {
+
+            @include mobile {
+                display: none;
+            }
+
+        }
+
+        .trends{
+
+            margin: 80px auto;
+
+            p{
+                font-size: 1.5rem;
+                font-style: italic;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            img{
+                height: 20px;
+                margin: 10px auto;
+            }
+
+        }
+    }
+    // End Guild
+
+    .criteria{
+
+        .criteria__image{
+            margin: auto 20px;
+        }
+
+        .criteria__items{
+
+            .column{
+
+                @include mobile{
+                    margin: auto 50px;
+                }
+                
+            }
+
+            
+            h1{
+                font-weight: 700;
+                font-size: 1.2rem;
+                margin-top: -40px;
+                margin-bottom: 10px;
+            }
+
+            p{
+                font-weight: 300;
+                font-size: 1rem;
+            }
+
+        }
+    }
+}
+// End Body Top
