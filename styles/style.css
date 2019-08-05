@@ -11094,6 +11094,7 @@ label.panel-block:hover {
 }
 
 .body-top .guild .guild__steps--steps .step:hover {
+  cursor: pointer;
   color: #ffffff;
   background-color: #ff6e00;
   border: 5px solid #fde0ca;
@@ -11167,6 +11168,10 @@ label.panel-block:hover {
   margin: 10px auto;
 }
 
+.body-top .criteria {
+  background-color: #f8f8f6;
+}
+
 .body-top .criteria .criteria__image {
   margin: auto 20px;
 }
@@ -11185,7 +11190,113 @@ label.panel-block:hover {
 }
 
 .body-top .criteria .criteria__items p {
-  font-weight: 300;
   font-size: 1rem;
+  font-weight: 300;
+}
+
+.body-mid .projects__text .title {
+  font-weight: 800;
+  font-size: 2.25rem;
+}
+
+.body-mid .projects__text .subtitle {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .body-mid .projects__all .column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.body-mid .projects__all .project {
+  margin: auto;
+  position: relative;
+  padding-bottom: 10px;
+  background-color: #2d343615;
+}
+
+.body-mid .projects__all .project__image {
+  position: relative;
+}
+
+.body-mid .projects__all .project__info-01 {
+  width: 90%;
+  bottom: 7px;
+  padding: 10px;
+  position: absolute;
+  background-color: #34314cc4;
+}
+
+.body-mid .projects__all .project__info-02 {
+  margin: 10px 20px;
+}
+
+.body-mid .projects__all .project__info-02 .icon {
+  margin: auto 5px;
+}
+
+.body-mid .projects__all .project__date, .body-mid .projects__all .project__price {
+  margin: 5px auto;
+}
+
+.body-mid .projects__all .project__place, .body-mid .projects__all .project__title {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.body-mid .projects__all .project__place {
+  font-size: 0.875rem;
+}
+
+.body-mid .projects__all .project__title {
+  font-size: 1.2rem;
+}
+
+.body-mid .projects__all .project__date-value {
+  font-size: 1rem;
+}
+
+.body-mid .projects__all .project__price-value {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.body-mid .projects__all .project__sale-block {
+  top: 30px;
+  right: -40px;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 999px;
+  background-color: #ff6e00;
+}
+
+.body-mid .projects__all .project__sale {
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: center;
+  position: absolute;
+}
+
+.body-mid .projects__all .project__sale p {
+  margin: auto;
+}
+
+.body-mid .projects__all .project__sale-value {
+  font-weight: 800;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
