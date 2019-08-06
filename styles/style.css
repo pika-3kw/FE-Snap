@@ -11194,6 +11194,10 @@ label.panel-block:hover {
   font-weight: 300;
 }
 
+.body-mid {
+  position: relative;
+}
+
 .body-mid .projects__text .title {
   font-weight: 800;
   font-size: 2.25rem;
@@ -11298,5 +11302,35 @@ label.panel-block:hover {
 .body-mid .projects__all .project__sale-value {
   font-weight: 800;
   font-size: 1.5rem;
+}
+
+.body-mid .register-now {
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  top: 440px;
+  right: -70px;
+}
+
+.body-mid .register-now__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body-mid .register-now__img {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.body-mid .register-now__text {
+  margin-left: 10px;
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */
