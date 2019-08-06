@@ -720,9 +720,12 @@ $font-NunitoSans : "NunitoSans";
 
 .body-mid{
 
+    position: relative;
+
     .projects {
 
         &__text {
+
             .title {
                 font-weight: 800;
                 font-size: 2.25rem;
@@ -732,9 +735,11 @@ $font-NunitoSans : "NunitoSans";
                 font-weight: 300;
                 font-size: 1.25rem;
             }
+            
         }
 
         &__all {
+
             .column {
                 @include mobile {
                     display: flex;
@@ -743,10 +748,13 @@ $font-NunitoSans : "NunitoSans";
 
             .project {
 
-                margin: auto;
-                position: relative;
-                padding-bottom: 10px;
-                background-color: #2d343615;
+                & {
+                    margin: auto;
+                    position: relative;
+                    padding-bottom: 10px;
+                    background-color: #2d343615;
+                }
+
 
                 &__image {
 
@@ -860,6 +868,41 @@ $font-NunitoSans : "NunitoSans";
 
     }
     // End Projects
+
+    .register-now {
+
+        & {
+            display: inline-block;
+            transform: rotate(90deg);
+            position: absolute;
+            top: 440px;
+            right: -70px;
+        }
+
+        &__block {
+
+            display: flex;
+            align-items: center;
+
+        }
+
+        &__img {
+
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+
+        }
+
+        &__text {
+
+            margin-left: 10px;
+            font-size: 0.875rem;
+            font-weight: 700;
+
+        }
+    }
+    //End Register Now
 
 }
 // End Body Mid
