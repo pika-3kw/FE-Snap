@@ -61,10 +61,52 @@ $font-NunitoSans : "NunitoSans";
     font-family: $font-NunitoSans;
 }
 
+.icon {
+
+    &--arrow {
+
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        position: absolute;
+        border-radius: 999px;
+        background-color: #00000065;
+
+        &:hover{
+            background-color: #fd6500;
+        }
+
+        & .fas {
+            color: white;
+            font-size: 1rem;
+        }
+
+    }
+
+    &--next {
+
+        right: 0;
+        transform: translate(50%, -50%);
+
+    }
+
+    &--prev {
+
+        left: 0;
+        transform: translate(-50%, -50%);
+
+    }
+
+}
+
 .header {
 
-    width: 100vw;
-    position: relative;
+    & {
+        width: 100vw;
+        position: relative;
+    }
+
 
     @include mobile {
         height: calc(100vh + 75px);
@@ -297,7 +339,7 @@ $font-NunitoSans : "NunitoSans";
                 margin: 60px;
             }
 
-            .columns.search-bar__main {
+            .search-bar__main {
 
                 .column {
 
@@ -371,24 +413,28 @@ $font-NunitoSans : "NunitoSans";
 
     .hotdeal {
 
-        left: 50%;
-        bottom: 0;
-        position: absolute;
-        box-sizing: border-box;
-        background-color: #34314c;
-        transform: translate(-50%, 50%);
+        & {
+            left: 50%;
+            bottom: 0;
+            position: absolute;
+            box-sizing: border-box;
+            background-color: #34314c;
+            transform: translate(-50%, 50%);
+        }
 
+        .carousel {
 
-        .slides {
+            .all-slides {
 
-            .columns {
-                padding: 10px 25px;
+                & {
+                    padding: 10px 25px;
+                }
 
                 @include mobile {
                     width: 450px;
                     height: 150px;
 
-                    .right-slide {
+                    .slide--right {
                         display: none;
                     }
                 }
@@ -406,76 +452,59 @@ $font-NunitoSans : "NunitoSans";
 
             }
 
-            .slide__text {
-                width: 60%;
-                float: left;
-                height: 100%;
+            .slide {
 
-                .hero-body {
-                    padding-left: 0;
+                &--left {
+                    height: 100%;
+                }
+            
+                &__text {
 
-
-                    h1,
-                    h2 {
-                        color: white;
-                        font-size: 1.125rem;
+                    & {
+                        width: 60%;
+                        float: left;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
                     }
 
-                    h1 {
-                        font-weight: 800;
+                    .hero-body {
+                        padding-left: 0;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+
+
+                        .title,
+                        .subtitle {
+                            color: white;
+                            font-size: 1.125rem;
+                        }
+
+                        .title {
+                            font-weight: 800;
+                        }
+
+                        .subtitle {
+                            font-weight: 300;
+                        }
                     }
 
-                    h2 {
-                        font-weight: 300;
-                    }
                 }
 
+                &__image {
+                    
+                    width: 40%;
+                    height: 100%;
+                    float: left;
+                    background-color: #c2c2c2;
 
-
+                }
             }
+            // End Slide
 
-            .slide__image {
-                width: 40%;
-                height: 100%;
-                float: left;
-                background-color: #c2c2c2;
-
-            }
         }
-        // End slide
-
-        .icon {
-
-            top: 50%;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            position: absolute;
-            border-radius: 999px;
-            background-color: #00000065;
-
-            &:hover {
-                background-color: #fd6500;
-            }
-
-            i {
-                color: white;
-                font-size: 1rem;
-            }
-
-            &.icon-right {
-
-                right: 0;
-                transform: translate(50%, -50%);
-            }
-
-            &.icon-left {
-
-                left: 0;
-                transform: translate(-50%, -50%);
-            }
-        }
-        // End Icon
+        // End Carousel
 
     }
     // End Hot Deal
@@ -720,9 +749,16 @@ $font-NunitoSans : "NunitoSans";
 
 .body-mid{
 
-    position: relative;
+    & {
+        padding-bottom: 100px;
+        position: relative;
+    }
 
     .projects {
+
+        & {
+            padding-bottom: 50px;
+        }
 
         &__text {
 
@@ -903,6 +939,120 @@ $font-NunitoSans : "NunitoSans";
         }
     }
     //End Register Now
+
+    .services {
+
+        &__text {
+
+            margin: 50px auto;
+
+        }
+
+        &__title {
+
+            font-weight: 800;
+            font-size: 2rem;
+
+        }
+
+        &__subtitle {
+
+            font-size: 1rem;
+            color: #ff6e00;
+
+        }
+
+        &__carousel {
+
+            position: relative;
+
+        }
+
+        .slide {
+            
+            &__show {
+
+                position: absolute;
+                width: 100%;
+                display: none;
+                height: 100%;
+                overflow: hidden;
+                box-sizing: border-box;
+                border-right: #ffffff 100px solid;
+                border-left: #ffffff 100px solid;
+
+            }
+
+            &__hide {
+                
+                position: absolute;
+                top: 0;
+                transform: scaleY(1.2);
+                height: 120%;
+                width: 100px;
+                background-color: #ffffff;
+
+                &--right {
+                    right: 0;
+                }
+
+                &--left {
+                    left: 0;
+                }
+
+            }
+
+            &__img {
+
+                width: calc(100vw/6 - 10px);
+
+            }
+            
+            &__item {
+
+                display: inline-block;
+                margin: 3px;
+                display: inline-block;
+
+                &:hover {
+
+                    transform: scale(1.2);
+                    cursor: pointer;
+
+                }
+
+            }
+
+            &__items {
+
+                display: flex;
+                justify-content: center;
+                width: 100vw;
+                z-index: -2;
+
+            }
+
+        }
+        // End Slide
+
+        .icon {
+
+            &--next {
+
+                right: 100px !important;
+                transform: translate(50%, -50%);
+
+            }
+
+            &--prev {
+
+                left: 100px !important;
+                transform: translate(-50%, -50%);
+
+            }
+        }
+    }
+    // End Service
 
 }
 // End Body Mid

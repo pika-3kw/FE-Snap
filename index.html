@@ -108,14 +108,14 @@
                             <div class="columns is-gapless is-half search-bar__main">
 
                                 <div class="column">
-                                    <div class="control search-bar__main--place">
+                                    <div class="control search-bar__place">
                                         <input class="input" type="text" placeholder="Địa điểm">
                                     </div>
                                 </div>
 
                                 <div class="column">
 
-                                    <div class="control search-bar__main--service">
+                                    <div class="control search-bar__service">
 
                                         <div class="select">
 
@@ -131,7 +131,7 @@
 
                                 <div class="column">
 
-                                    <div class="control search-bar__main--price">
+                                    <div class="control search-bar__price">
 
                                         <div class="select">
 
@@ -149,7 +149,7 @@
 
                                 <div class="column">
 
-                                    <div class="control search-bar__main--button">
+                                    <div class="control search-bar__button">
                                         <a class="button is-uppercase">TÌM KIẾM</a>
                                     </div>
 
@@ -172,17 +172,17 @@
         <!-- End Container -->
 
         <div class="hotdeal">
-            <div class="icon icon-right">
+            <div class="icon icon--arrow icon--next">
                 <i class="fas fa-arrow-right"></i>
             </div>
 
-            <div class="icon icon-left">
+            <div class="icon icon--arrow icon--prev">
                 <i class="fas fa-arrow-left"></i>
             </div>
 
-            <div class="slides">
-                <div class="columns is-tablet">
-                    <div class="column is-6 left-slide">
+            <div class="carousel">
+                <div class="columns is-tablet all-slides">
+                    <div class="column is-6 slide--left">
 
                         <div class="slide__text">
                             <section class="hero has-text-centered">
@@ -206,7 +206,7 @@
                     <!-- End Left Slide -->
 
 
-                    <div class="column is-6 right-slide">
+                    <div class="column is-6 slide--right">
                         <div class="slide__text">
 
                             <section class="hero has-text-centered">
@@ -761,6 +761,97 @@
 
         </div>
         <!-- End Resgister Now -->
+
+        <div class="services">
+
+            <div class="services__text">
+                <div class="container">
+
+                    <div class="columns">
+
+                        <div class="column is-4">
+                            <section class="hero">
+
+                                <h1 class="title services__title">
+                                    Các dịch vụ chụp
+                                </h1>
+                                <h2 class="subtitle services__subtitle">
+                                    15 chủ đề cho bạn lựa chọn
+                                </h2>
+
+                            </section>
+                        </div>
+
+                        <div class="column">
+                            <p>Để tạo ra một bức hình đẹp đòi hỏi phải tìm tòi, lao động và có hiểu biết về nhiều lĩnh
+                                vực. Mỗi chủ đề cho bộ ảnh đều là những lĩnh vực khác nhau mà phải làm quen và hiểu về
+                                nó, phải tự mình chuẩn bị các vieccj liên quan như lên kế hoạch.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- End Services Text -->
+
+            <div class="services__carousel">
+
+                <div class="slide__show">
+                    <!-- TODO 
+                        -   Create frame show 4 items, 1/2 previous item and 1/2 next item
+                        -   Load slide from slide_items
+                    -->
+
+
+                </div>
+                <!-- End Slide Show -->
+
+                <div class="slide__items">
+
+                    <div class="slide__item slide__item-prev">
+                        <img class="slide__img" src="./images/img02.png" alt="">
+                    </div>
+
+                    <div class="slide__item">
+                        <img class="slide__img" src="./images/img02.png" alt="">
+                    </div>
+
+                    <div class="slide__item">
+                        <img class="slide__img" src="./images/img02.png" alt="">
+                    </div>
+
+                    <div class="slide__item">
+                        <img class="slide__img" src="./images/img02.png" alt="">
+                    </div>
+
+                    <div class="slide__item">
+                        <img class="slide__img" src="./images/img02.png" alt="">
+                    </div>
+
+                    <div class="slide__item slide__item-next">
+                        <img class="slide__img" src="./images/img02.png" alt="">
+                    </div>
+
+
+                </div>
+                <!-- End Slide Items -->
+
+                <div class="slide__hide slide__hide--right"></div>
+                <div class="slide__hide slide__hide--left"></div>
+
+                <div class="icon icon--arrow icon--next">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+                <div class="icon icon--arrow icon--prev">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+
+            </div>
+
+            <!-- End Services Carousel -->
+
+        </div>
+        <!-- End Services -->
 
     </div>
     <!-- End Body-Mid -->
