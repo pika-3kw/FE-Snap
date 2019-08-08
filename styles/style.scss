@@ -118,6 +118,7 @@ $font-NunitoSans : "NunitoSans";
 
     @include desktop {
         height: calc(100vh + 90px);
+
     }
 
     &::before {
@@ -431,12 +432,14 @@ $font-NunitoSans : "NunitoSans";
                 }
 
                 @include mobile {
+                    
                     width: 450px;
                     height: 150px;
 
                     .slide--right {
                         display: none;
                     }
+
                 }
 
                 @include tablet {
@@ -449,8 +452,12 @@ $font-NunitoSans : "NunitoSans";
                     height: 180px;
                 }
 
-
             }
+
+            .slide{
+                height: 100%;
+            }
+
 
             .slide {
 
@@ -474,7 +481,6 @@ $font-NunitoSans : "NunitoSans";
                         align-items: center;
                         flex-direction: column;
 
-
                         .title,
                         .subtitle {
                             color: white;
@@ -488,7 +494,9 @@ $font-NunitoSans : "NunitoSans";
                         .subtitle {
                             font-weight: 300;
                         }
+                      
                     }
+
 
                 }
 
@@ -498,6 +506,7 @@ $font-NunitoSans : "NunitoSans";
                     height: 100%;
                     float: left;
                     background-color: #c2c2c2;
+
 
                 }
             }
