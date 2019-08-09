@@ -1068,7 +1068,28 @@ $font-NunitoSans : "NunitoSans";
 
 .body-bottom {
 
+    margin: 30px auto;
+
     .subscribe {
+
+        margin-bottom: 40px;
+
+        @include mobile {
+
+            margin: auto 30px 70px 30px;
+
+            &__button {
+                a {
+                    border-radius: 999px;
+                    float: right;
+                }
+            }
+            
+            &__email-input {
+                border-radius: 999px;
+            }
+            
+        }
 
         &__email-input {
 
@@ -1092,11 +1113,80 @@ $font-NunitoSans : "NunitoSans";
                 height: 100%;
                 border-top-right-radius: 999px;
                 border-bottom-right-radius: 999px;
+
             }
 
         }
     }
     // End Subscribe
 
+    .partner {
+
+        text-align: center;
+
+        &__img {
+            margin: 10px;
+            max-width: 95%;
+        }
+
+    }
+    // End Partner
+
+    .review {
+
+        padding: 30px 0;
+        position: relative;
+        background-color: #f8f8f6;
+        margin-top: 100px;
+
+        &__title {
+
+            font-weight: 700;
+            font-size: 2.25rem;
+            margin: 40px auto;
+            margin-left: 30px;
+
+        }
+
+        &__item {
+
+            padding-left: 50px;
+            padding-right: 100px;
+
+        }
+
+        &__content {
+            margin: 30px auto;
+        }
+
+        &__image {
+
+            width: 250px;
+            position: absolute;
+            right: 0px;
+            top: -100px;
+            
+            @include mobile {
+                display: none;
+            }
+            
+        }
+
+        .reviewer {
+
+            & {
+                display: flex;
+                align-items: center;
+                margin-top: 30px
+            }
+
+            &__avatar, &__info {
+                margin: auto 5px;
+            }
+
+        }
+    }
+
 }
 // End Body Bottom
+    
