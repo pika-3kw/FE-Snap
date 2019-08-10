@@ -11454,7 +11454,7 @@ label.panel-block:hover {
 }
 
 .body-bottom {
-  margin: 30px auto;
+  margin-top: 30px;
 }
 
 .body-bottom .subscribe {
@@ -11554,6 +11554,115 @@ label.panel-block:hover {
 }
 
 .body-bottom .review .reviewer__avatar, .body-bottom .review .reviewer__info {
+  margin: auto 5px;
+}
+
+.footer-top {
+  background-color: #34314c;
+  color: #aeaeae;
+  padding: 50px 30px;
+}
+
+.footer-top .service {
+  margin-bottom: 30px;
+}
+
+.footer-top .service__place {
+  font-size: 0.8rem;
+}
+
+.footer-top .service__place p {
+  margin: 5px auto;
+}
+
+.footer-top .service__title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 20px auto;
+}
+
+.footer-top .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-top .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer-top .contact__brand {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-left: 0 !important;
+}
+
+.footer-top .contact__brand--orange {
+  color: #fd6500;
+}
+
+.footer-top .contact__website a {
+  color: #aeaeae;
+}
+
+.footer-top .contact__website a:hover {
+  color: #6d6868;
+}
+
+.footer-top .contact__item {
+  margin: auto 20px;
+  text-align: center;
+}
+
+.footer-top .contact__social {
+  margin-right: 0 !important;
+}
+
+.footer-top .contact__social .fab {
+  font-size: 1.5rem;
+  margin: 10px 20px;
+}
+
+.footer-top .contact__social div {
+  display: inline-block;
+}
+
+.footer-bottom {
+  background-color: #1e1b31;
+  color: #aeaeae;
+  padding: 30px;
+}
+
+.footer-bottom .copyright, .footer-bottom .intro {
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-bottom .copyright, .footer-bottom .intro {
+    display: block;
+    text-align: center;
+    float: none !important;
+  }
+}
+
+.footer-bottom .intro {
+  float: right;
+}
+
+.footer-bottom .intro a {
   margin: auto 5px;
 }
 /*# sourceMappingURL=style.css.map */

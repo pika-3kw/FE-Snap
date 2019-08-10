@@ -1068,7 +1068,7 @@ $font-NunitoSans : "NunitoSans";
 
 .body-bottom {
 
-    margin: 30px auto;
+    margin-top: 30px;
 
     .subscribe {
 
@@ -1189,4 +1189,116 @@ $font-NunitoSans : "NunitoSans";
 
 }
 // End Body Bottom
+
+.footer-top {
+
+    background-color: #34314c;
+    color: #aeaeae;
+    padding: 50px 30px;
+
+    .service {
+
+        margin-bottom: 30px;
+
+        &__place {
+
+            font-size: 0.8rem;
+
+            p{
+                margin: 5px auto;
+            }
+        }
+
+        &__title {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1rem;
+            margin: 20px auto;
+        }
+    }
+    // End Service
+
     
+    .contact {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        &__brand {
+
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-left: 0 !important;
+
+            &--orange {
+                color: #fd6500;
+            }
+        }
+
+        &__website a {
+
+            color: #aeaeae;
+
+            &:hover {
+                color: #6d6868;
+            }
+        }
+
+        &__item {
+            margin: auto 20px;
+            text-align: center;
+        }
+
+        &__social {
+
+            margin-right: 0 !important;
+
+            .fab {
+                font-size: 1.5rem;
+                margin: 10px 20px;
+            }
+
+            div {
+                display: inline-block;
+            }
+        }
+        
+    }
+    // End Contact
+    
+}
+// End Footer Top
+
+.footer-bottom {
+
+    background-color: #1e1b31;
+    color: #aeaeae;
+    padding: 30px;
+
+    .copyright, .intro {
+        display: inline-block;
+
+        @include mobile {
+            display: block;
+            text-align: center;
+            float: none !important;
+        }
+    }
+
+    .intro {
+
+        float: right;
+
+        a {
+            margin: auto 5px;
+        }
+    }
+
+}
+// End Footer Bottom
